@@ -2,21 +2,11 @@ package storage
 
 import (
 	"context"
-	"errors"
 	"log"
 
 	"github.com/delgoden/shop-wares-service/internal/models"
 	"github.com/jackc/pgx"
 	"github.com/jackc/pgx/v4/pgxpool"
-)
-
-var (
-	ErrInternal               = errors.New("internal error")
-	ErrCategoryAlreadyExists  = errors.New("category already exists")
-	ErrCategoryDoesNotExist   = errors.New("category does not exist")
-	ErrCategoriesDoesNotExist = errors.New("categories does not exist")
-	ErrProductAlreadyExists   = errors.New("product already exists")
-	ErrProductDoesNotExist    = errors.New("product does not exist")
 )
 
 type CategoryStorage struct {

@@ -2,9 +2,19 @@ package storage
 
 import (
 	"context"
+	"errors"
 	"time"
 
 	"github.com/jackc/pgx/v4/pgxpool"
+)
+
+var (
+	ErrInternal               = errors.New("internal error")
+	ErrCategoryAlreadyExists  = errors.New("category already exists")
+	ErrCategoryDoesNotExist   = errors.New("category does not exist")
+	ErrCategoriesDoesNotExist = errors.New("categories does not exist")
+	ErrWareAlreadyExists      = errors.New("ware already exists")
+	ErrWareDoesNotExist       = errors.New("ware does not exist")
 )
 
 // type Config struct {
